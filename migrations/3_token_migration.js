@@ -8,6 +8,4 @@ module.exports = async function(deployer, network, accounts) {
   await link.approve(dex.address, 500)
   wallet.addToken(web3.utils.fromUtf8("LINK"), link.address)
   await wallet.deposit(100, web3.utils.fromUtf8("LINK"))
-  let balanceofLink = wallet.balance(accounts[0], web3.utils.fromUtf8("LINK"));
-  console.log(balanceofLink);
 };
